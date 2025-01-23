@@ -226,7 +226,7 @@ void sia_write( sia_t* sia, const char* name, const char* out_path,
     out_file = fopen( out_file_name, "w" );
 
     if( strcmp( format, G_FMT_GML ) == 0 ) {
-        igraph_write_graph_gml( &sia->g, out_file, NULL, G_GML_HEAD );
+        igraph_write_graph_gml( &sia->g, out_file, 0, 0, "" );
     }
     else if( strcmp( format, G_FMT_GRAPHML ) == 0 ) {
         igraph_write_graph_graphml( &sia->g, out_file, 1 );
